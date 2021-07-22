@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include '_css-link.njk' %}
+    {% include '_css-global.njk' %}
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/datatables.min.css"/>
+    <script type="text/javascript" src="/js/datatables.min.js"></script>
+    <script type="text/javascript" src="/js/cleartable.js"></script>
+
+                 
+        
+
+
+  </head>
+  <body class="">
+  <script>
+ 
+$(document).ready(function() {
+    $('#productstable').DataTable( {
+       "scrollX": true,
+       "lengthChange": false,
+       "pageLength": 25,
+       
+        initComplete: function () {
+            this.api().columns(0).every( function () {
+                var column = this;
+                var select = $('<select class="clearthis"><option value=""></option></select>')
+                    .appendTo( $(".filter1").empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    } );
+} );
+
+
+
+  </script>
+
+
+    {% from '../_includes/_components.njk' import unav,nav,footer,unavcurrent,unavcurrentfooter   %}
+
+  
+   {{ unavcurrent () }}
+    {{ nav({ 
+    agencyname: "Office of General Services",
+    link: "/",
+    arialabel: "New York State Office of General Services green products list",
+    color: "bg-admin-first"
+      })}}
+    <main class="mx-8 md:mx-20">
+    {{ content | safe }}
+    </main>
+
+
+    {{ footer({ 
+    agencyname: "Office of General Services ",
+    link: "/",
+    arialabel: "New York State Office of General Services Green Products List",
+    color: "bg-admin-third",
+    facebook:"https://www.facebook.com/NewYorkStateOGS/",
+    twitter: "https://twitter.com/NYS_OGS",
+    instagram:"https://www.instagram.com/nysgeneralservices/",
+    items: [
+    {
+      text: "Privacy Policy",
+      link: "https://ogs.ny.gov/privacy-policy",
+      arialabel:"Link to Agency's privacy policy."
+    },
+     {
+      text: "Accessibility",
+      link: "https://ogs.ny.gov/website-accessibility",
+      arialabel:"Link to Agency's accessibility policy."
+     },
+      {
+      text: "Contact Us",
+      link: "https://ogs.ny.gov/contact-office-general-services",
+      arialabel:"Link to Agency's contact page."
+     }
+    ]
+      })}}
+       {{ unavcurrentfooter () }}
+  </body>
+</html>
