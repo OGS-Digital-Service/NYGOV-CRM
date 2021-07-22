@@ -5,9 +5,6 @@
       main p {
         margin-bottom: 1rem;
       }
-      main td p {
-        margin-bottom: 0rem;
-      }
       main a:hover {
         text-decoration:underline;
       }
@@ -17,10 +14,10 @@
       main ol.list {
         list-style-type:numeral;
       }
-      main table ul {
+      {# main ul {
         list-style-type:disc;
-        margin-left: .5rem;
-      } 
+        margin-left: 1.5rem;
+      } #}
       main h1 {
           font-size: 2.5em;
           font-weight: 700;
@@ -37,8 +34,8 @@
         font-family: Oswald, Arial, sans-serif;
         }
       .noscaleicon {
-        min-width: 1.5rem;
-        min-height: 1.5rem;
+        min-width: 1.4rem;
+        min-height: 1.4rem;
       }
       .caret::after {
         content: '>';
@@ -48,10 +45,19 @@
       .caret:last-of-type::after{
         content: none;
       }
-
-      .position-options {
+      .min-h-1\/5 {
+        min-height: 20%
+      }
+      .horizontal-line::before, .horizontal-line::after {
+          background-color: #000;
+          content: '';
+          display: inline-block;
+          height: 1px;
+          position: relative;
+          vertical-align: middle;
+          min-width: 30vw;
+          
        
-      
 
       }
       </style>
