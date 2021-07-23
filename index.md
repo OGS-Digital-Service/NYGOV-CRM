@@ -11,6 +11,6 @@ title: test homepage only
     subtitle: "",
     image:"",
     buttontext: "First Template",
-    link: "/template",
+    link: "/test-template",
     arialabel: "Testing the first template"
 })}} 
