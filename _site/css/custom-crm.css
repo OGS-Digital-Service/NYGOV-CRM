@@ -1,3 +1,50 @@
-.at .btn-at-primary {
+.btn-at-primary {
     background-color: #1b2a5e !important;
     }
+
+p {
+    padding-top: 0.3rem;
+    padding-bottom: 0.4rem;
+}
+.gov-wrapper {
+        padding: 9px;
+        background-color: #1b2a5e;
+        font-size: 10px;
+        text-align: center;
+    }
+.gov-wrapper .gov-title {
+        color: #f5a81c;
+        font-family: "ProximaNovaBold", sans-serif; }
+    
+.gov-wrapper .gov-name {
+        color: #ffffff;
+        font-family: "ProximaNovaBold", sans-serif;}
+
+.header-section img {
+            max-height: 60px;
+            text-align: center;
+            margin: 0 auto;
+            display:block;
+        }
+
+.at-form-submit .at-submit {
+            margin: 0 auto;
+            display: inline-block;
+            float: none !important; 
+            width: 100%;
+        }
+
+.back-link {
+            background-color: #e5e5e5 !important;
+            text-align: center;
+            
+        }
+.contributions #fbShareBtn {
+    margin-left: 29%;
+}        
+
+@media (min-width: 768px) {
+    .contributions #fbShareBtn {
+        margin-left: 40%;
+    }  
+  }

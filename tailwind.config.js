@@ -1,9 +1,9 @@
 module.exports = {
   purge: [
-    'docs/iconframe/*.html'
+    '_site/template/*.html'
     // 'docs/*.html',
     // 'docs/**/*.html'  
-
+    //NODE_ENV=production npx tailwindcss-cli@latest build  -o css/nysds-tw-min.css lol this is the command to make this work //
   ],
   darkMode: false, // or 'media' onpm init -yr 'class'
   theme: {
