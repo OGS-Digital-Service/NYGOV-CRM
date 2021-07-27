@@ -16,6 +16,6 @@ title: Testing color change and templating
     </div>
     </div>
      
-    <article class="">{{EmbedForm}}</article>
+    <article class=""> {{EmbedForm}} </article>
 
 </section>
