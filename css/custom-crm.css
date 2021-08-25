@@ -1,6 +1,9 @@
 .btn-at-primary {
     background-color: #1b2a5e !important;
     }
+.ngp-form {
+ max-width: 1200px !important;
+    }
 
 p {
     padding-top: 0.3rem;
@@ -42,6 +45,11 @@ p {
 .contributions #fbShareBtn {
     margin-left: 29%;
 }        
+header.at-title {    
+    color: #24387e !important;        
+    font-weight: 900 !important;     
+    font-size: 2rem !important;    
+}
 
 @media (min-width: 768px) {
     .contributions #fbShareBtn {
